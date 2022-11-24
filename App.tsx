@@ -8,6 +8,7 @@ import {
   CardStyleInterpolators,
 } from "@react-navigation/stack";
 import PaginaInicial from './Views/PaginaInicial';
+import Login from './Views/Login';
 const Stack:any = createStackNavigator();
 export default function App() {
   return (
@@ -28,6 +29,16 @@ initialRouteName="MensagemInicial"
         <Stack.Screen
           name="PaginaInicial"
           component={PaginaInicial}
+          options={{
+            tabBarStyle: { display: "none" },
+            headerShown: false,
+            tabBarShowLabel: false,
+            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
           options={{
             tabBarStyle: { display: "none" },
             headerShown: false,

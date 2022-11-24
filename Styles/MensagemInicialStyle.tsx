@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native"
+import geral from "./geral"
 
 const MensagemInicialStyle = StyleSheet.create({
     body:{
-        width:'100%',
+        width:geral.windowWidth,
         height:'100%',
         alignItems:'center',
         backgroundColor:'white'

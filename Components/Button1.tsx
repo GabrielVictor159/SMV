@@ -58,7 +58,7 @@ const button1 = (props:any) => {
         >
           <Text
             style={{
-              color: "white",
+              color: props.textColor,
               fontWeight: "normal",
               fontSize: props.fontSize,
             }}

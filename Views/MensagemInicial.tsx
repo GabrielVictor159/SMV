@@ -19,6 +19,7 @@ export default function MensagemInicial(){
                 tipoNavegacao="navigate"
                 navegacao="PaginaInicial"
                 texto="Proximo"
+                textColor="white"
                 color1={cores.background}
                 color2={cores.background}
               />
