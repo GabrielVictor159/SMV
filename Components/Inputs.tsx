@@ -16,7 +16,7 @@ export default function Inputs(props) {
     >
       <View style={{ width: "100%", height: "100%", alignItems: "center" }}>
         <TextInput
-          style={{ width: "75%", height: "100%", textAlign: "center" }}
+          style={{ width:props.image!==undefined? "75%":"100%", height: "100%", textAlign: props.image!==undefined? "center" : "auto"}}
           keyboardType={props.keyboardType}
           placeholder={props.placeholder}
           secureTextEntry={props.secureText}
