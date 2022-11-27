@@ -21,7 +21,11 @@ const KeyboardShow = StyleSheet.create({
         borderTopRightRadius: 60,
         borderTopLeftRadius: 60,
         alignItems: 'center'
-    }
+    },
+    voltar:{
+        color: '#46A6FF',
+        fontSize: 18,
+    },
 })
 const KeyboardHide = StyleSheet.create({
 
