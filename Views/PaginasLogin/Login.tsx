@@ -63,8 +63,8 @@ export default function Login() {
           height={55}
           borderRadius={15}
           fontSize={20}
-          tipoNavegacao="navigate"
-          navegacao="PaginaInicial"
+          tipoNavegacao="reset"
+          navegacao="NavigateUsuario"
           texto="Logar"
           textColor="white"
           color1={cores.background}

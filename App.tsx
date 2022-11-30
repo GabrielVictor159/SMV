@@ -10,6 +10,7 @@ import {
 import PaginaInicial from './Views/PaginasLogin/PaginaInicial';
 import Login from './Views/PaginasLogin/Login';
 import Cadastrar from './Views/PaginasLogin/Cadastrar';
+import NavigateUsuario from './Views/PaginasUsuario/NavigateUsuario';
 const Stack:any = createStackNavigator();
 export default function App() {
   return (
@@ -50,6 +51,16 @@ initialRouteName="MensagemInicial"
         <Stack.Screen
           name="Cadastrar"
           component={Cadastrar}
+          options={{
+            tabBarStyle: { display: "none" },
+            headerShown: false,
+            tabBarShowLabel: false,
+            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          }}
+        />
+        <Stack.Screen
+          name="NavigateUsuario"
+          component={NavigateUsuario}
           options={{
             tabBarStyle: { display: "none" },
             headerShown: false,
