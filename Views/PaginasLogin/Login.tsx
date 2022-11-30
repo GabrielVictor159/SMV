@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, TextInput, Text, TouchableOpacity } from "react-native";
 import { View } from "react-native";
-import geral from "../Styles/geral";
-import LoginStyle from "../Styles/LoginStyle";
-import Inputs from "../Components/Inputs";
-import cores from "../Styles/cores";
-import Button1 from "../Components/Button1";
+import geral from "../../Styles/geral";
+import LoginStyle from "../../Styles/LoginStyle";
+import Inputs from "../../Components/Inputs";
+import cores from "../../Styles/cores";
+import Button1 from "../../Components/Button1";
 
 export default function Login() {
   const [keyboard, setKeyboard] = useState(false);
@@ -17,7 +17,7 @@ export default function Login() {
     <View style={LoginStyle.KeyboardShow.body}>
       <Image
         style={LoginStyle.KeyboardShow.logo}
-        source={require("../assets/picwish1.png")}
+        source={require("../../assets/picwish1.png")}
       />
       <View style={LoginStyle.KeyboardShow.container}>
         <Text>{'\n'}</Text>
@@ -43,7 +43,7 @@ export default function Login() {
             keyboardType={"email-address"}
             placeholder={"E-mail"}
             onChangeText={setEmail}
-            image={require("../assets/user1.png")}
+            image={require("../../assets/user1.png")}
           />
           <Inputs
             width={240}
@@ -54,7 +54,7 @@ export default function Login() {
             secureText={true}
             placeholder={"Senha"}
             onChangeText={setSenha}
-            image={require("../assets/padlock.png")}
+            image={require("../../assets/padlock.png")}
           />
         </View>
         <Text>{"\n\n"}</Text>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Image, View, Text, TextInput, TouchableOpacity } from "react-native";
-import CadastrarStyle from "../Styles/CadastrarStyle";
+import CadastrarStyle from "../../Styles/CadastrarStyle";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-import Inputs from "../Components/Inputs";
-import cores from "../Styles/cores";
-import Button1 from "../Components/Button1";
+import Inputs from "../../Components/Inputs";
+import cores from "../../Styles/cores";
+import Button1 from "../../Components/Button1";
 import { useNavigation } from "@react-navigation/native";
 
 
@@ -30,7 +30,7 @@ export default function Cadastrar() {
     };
     return (
         <View style={CadastrarStyle.KeyboardShow.body}>
-            <Image style={CadastrarStyle.KeyboardShow.logo} source={require('../assets/picwish1.png')} />
+            <Image style={CadastrarStyle.KeyboardShow.logo} source={require('../../assets/picwish1.png')} />
             <Text>{'\n'}</Text>
             <View style={CadastrarStyle.KeyboardShow.container}>
                 <Text>{'\n\n'}</Text>
