@@ -6,9 +6,11 @@ import { Image, Text, View } from "react-native";
 import PaginaDados from "./PaginaDados";
 import PaginaNotificacao from "./PaginaNotificacao";
 import UsuarioController from "../../Controller/UsuarioController";
+import { useNavigation } from "@react-navigation/native";
 const Tab = createMaterialTopTabNavigator();
 
 export default function NavigateUsuario(){
+    const navigation = useNavigation();
     const [swipeEnabled, setSwipeEnabled] = useState(true);
      const [display, setDisplay] = useState("flex");
      const [usuario, setUsuario] = useState(new UsuarioController().usuario)
@@ -34,7 +36,7 @@ export default function NavigateUsuario(){
             
             <Tab.Screen 
             name = "PaginaDados"
-            children={()=><PaginaDados usuario={usuario} setUsuario={setUsuario} swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
+            children={()=><PaginaDados navigationReset={navigation} usuario={usuario} setUsuario={setUsuario} swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
             
             options={{
                 
