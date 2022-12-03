@@ -14,12 +14,11 @@ return(
     >   
         <Text>{'\n'}</Text>
         <Text style={props.tituloStyle}>{props.titulo}</Text>
-        <Text>{'\n'}</Text>
         {props.Placeholder1 !==undefined?
         <>
         <View style={{ justifyContent:'center' }}>
             <Image
-              style={{ top: "50%", left:'10%' }}
+              style={{width:25, height:25, top: "50%", left:'10%' }}
               source={props.iconInput1}
             />
             <TextInput
@@ -39,7 +38,7 @@ return(
         <>
         <View style={{ justifyContent:'center' }}>
             <Image
-              style={{ top: "50%", left:'10%' }}
+              style={{width:25, height:25, top: "50%", left:'10%' }}
               source={props.iconInput1}
             />
             <TextInput
@@ -59,7 +58,7 @@ return(
         <>
         <View style={{ justifyContent:'center' }}>
             <Image
-              style={{ top: "50%", left:'10%' }}
+              style={{width:25, height:25, top: "50%", left:'10%' }}
               source={props.iconInput1}
             />
             <TextInput
@@ -75,10 +74,10 @@ return(
           
           </>
           : <></>}
-          <Text>{'\n'}</Text>
+    
         <TouchableOpacity style={{ width: props.buttonWidth, height: props.buttonHeight, elevation: 10,
                 backgroundColor: props.buttonColor,
-                borderRadius: 25,}}
+                borderRadius: 25, top:20}}
         onPress={()=>{
            const x = props.buttonAction(props.actionParam1, props.actionParam2, props.actionParam3, props.actionParam4)
          
@@ -99,6 +98,7 @@ return(
               </Text>
             </View>
           </TouchableOpacity>
+          <Text>{'\n'}</Text>
     </Overlay>
 );
 }

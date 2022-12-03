@@ -9,6 +9,12 @@ export default class UsuarioController{
         this.usuario.perfil.DataDeNascimento='18/08/2001';
         this.usuario.perfil.CartaoDeVacina=456665423321;
         this.usuario.perfil.Image=require('../assets/Usuario_Image.png');
+        this.usuario.alterarEmail = function alterarEmail(emailAntigo, emailNovo){
+            return true
+        }
+        this.usuario.alterarSenha = function alterarSenha(senhaAntiga, senhaNova, senhaNovaConfirma){
+            return true
+        }
         this.usuario.Vacinas.push(
             {
                 nome:'Vacina x',
@@ -85,6 +91,7 @@ export default class UsuarioController{
             }
         )
     }
+
    
 
 }

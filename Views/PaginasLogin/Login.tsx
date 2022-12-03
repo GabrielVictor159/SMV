@@ -107,7 +107,7 @@ export default function Login() {
         </View>
 
 
-        
+
         <Overlay
           fullScreen={false}
           onBackdropPress={toggleOverlay}
@@ -145,8 +145,8 @@ export default function Login() {
           </View>
           <Text>{"\n\n"}</Text>
           <TouchableOpacity style={{
-            width: "60%", height: 70, elevation: 10,
-            backgroundColor: "#0D5692",
+            width: "60%", height: 60, elevation: 10,
+            backgroundColor: "#89C5FD",
             borderRadius: 25,
           }}
             onPress={() => {
