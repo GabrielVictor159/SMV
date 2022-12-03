@@ -6,7 +6,7 @@ export default class Usuario{
     Email:String,
     Senha:String,
     CartaoDeVacina:Number,
-    Image
+    Image:String,
     }
     
     Notificacao=[];

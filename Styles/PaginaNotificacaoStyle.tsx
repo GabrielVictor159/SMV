@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const keyboardHide = StyleSheet.create({
+const PaginaNotificacaoStyle = StyleSheet.create({
     body: {
         width: '100%',
         height: '100%',
@@ -40,29 +40,11 @@ const keyboardHide = StyleSheet.create({
         top: 15,
         left: '-10%'
     },
-    buscaContainer: {
-        width: '80%',
-        height: 50,
-        borderWidth: 2,
-        elevation: 15,
-        backgroundColor: 'white',
-        borderRadius: 10,
-        borderColor: '#787777',
-        flexDirection: 'row',
-    },
-    servicosContainer: {
-        width: '90%',
-        maxHeight:'68%',
-        backgroundColor: 'white',
-        borderWidth:2,
-        borderColor:'#787777',
-        elevation:15,
-        borderRadius:15
+    notificacaoContainer:{
+        width:'100%', height:'67%',
+        alignItems:'center',
+        overflow:'visible',
     },
 })
 
-const keyboardShow = StyleSheet.create({
-
-})
-
-export default { keyboardHide, keyboardShow }
+export default PaginaNotificacaoStyle ;

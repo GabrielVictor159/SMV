@@ -5,12 +5,15 @@ import PaginaInicio from "./PaginaInicio";
 import { Image, Text, View } from "react-native";
 import PaginaDados from "./PaginaDados";
 import PaginaNotificacao from "./PaginaNotificacao";
+import UsuarioController from "../../Controller/UsuarioController";
 const Tab = createMaterialTopTabNavigator();
 
 export default function NavigateUsuario(){
     const [swipeEnabled, setSwipeEnabled] = useState(true);
      const [display, setDisplay] = useState("flex");
+     const [usuario, setUsuario] = useState(new UsuarioController().usuario)
     return(
+        <>
         <NavigationContainer independent={true}>
             <Tab.Navigator
             initialRouteName="PaginaInicio"
@@ -21,7 +24,7 @@ export default function NavigateUsuario(){
                     height:0,
                 },
                 
-                tabBarStyle:{height:80, display:display},
+                tabBarStyle:{height:80, display:display, borderTopWidth:2, borderColor:'#B8B8B8'},
                 tabBarIconStyle:{alignItems:'center'},
                 tabBarActiveTintColor:'#e91e63',
                 
@@ -31,7 +34,7 @@ export default function NavigateUsuario(){
             
             <Tab.Screen 
             name = "PaginaDados"
-            children={()=><PaginaDados swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
+            children={()=><PaginaDados usuario={usuario} setUsuario={setUsuario} swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
             
             options={{
                 
@@ -52,7 +55,7 @@ export default function NavigateUsuario(){
             />
             <Tab.Screen 
             name = "PaginaInicio"
-            children={()=><PaginaInicio swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
+            children={()=><PaginaInicio usuario={usuario} setUsuario={setUsuario} swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
             options={{
                 
                 tabBarLabel:({focused})=>{
@@ -72,7 +75,7 @@ export default function NavigateUsuario(){
             />
             <Tab.Screen 
             name = "PaginaNotificacao"
-            children={()=><PaginaNotificacao swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
+            children={()=><PaginaNotificacao usuario={usuario} setUsuario={setUsuario} swipe={setSwipeEnabled} navDisplay={setDisplay}/>}
             options={{
                 
                 tabBarLabel:({focused})=>{
@@ -92,5 +95,6 @@ export default function NavigateUsuario(){
             />
             </Tab.Navigator>
         </NavigationContainer>
+        </>
     );
 }
